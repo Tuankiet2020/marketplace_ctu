@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black !important;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+  /* overflow-x: hidden; */
+}
+a{
+  text-decoration: none !important;
+  color: black !important;
+  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.main-content{
+  /* min-height: 100vh; */
+}
+
+.mk-footer p{
+  margin-bottom: 0;
+}
+

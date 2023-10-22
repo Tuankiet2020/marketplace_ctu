@@ -1,0 +1,326 @@
+/* Desktop navbar */
+.mnavbar{
+    display: none;
+}
+
+.navbar {
+    background-color: var(--primary, #0d47a1);
+    padding: 0 36px;
+    display: block;
+}
+
+.list {
+    display: flex;
+}
+
+.brand img {
+    display: block;
+    max-width: 48px;
+    margin-right: 16px;
+}
+
+.brand>a {
+    display: flex;
+    align-items: center;
+}
+
+.brand h3 {
+    margin-bottom: 0;
+    color: white;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 12px 0;
+}
+
+.item {
+    color: white !important;
+    /* font-weight: bold; */
+    position: relative;
+    user-select: none;
+    text-align: center;
+    padding: 0 14px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color ease-in-out .3s;
+}
+
+.item:hover {
+    background-color: var(--primarya, #f4f4f464);
+}
+
+.mnavbar {
+    background-color: var(--primary, #0d47a1);
+    color: white !important;
+}
+
+.mmenu {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.mbrand h3{
+    color: white;
+    margin-left: 12px;
+    margin-bottom: 0;
+}
+
+.toggle {
+    cursor: pointer;
+    transition: opacity ease .3s;
+}
+
+.toggle:hover {
+    opacity: 0.6;
+}
+
+.mbrand img {
+    display: block;
+    max-width: 36px;
+}
+
+.mbrand>a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.mbrand {
+    flex: 1;    
+}
+
+/* Cover + Display */
+.mlist, .cover {
+    position: fixed;
+    top:0;
+    left: 0;
+    /* transform: translateX(-100%); */
+}
+
+.cover {
+    background-color: #3333335c;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+}
+
+.mlist {
+    background-color: var(--primary, #0d47a1);
+    width: 70%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+.mtitle {
+    padding: 12px 24px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mtitle>h3{
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.mtitle>img {
+    width: 32px;
+}
+
+.mtitle >i{
+    margin-left: 24px;
+}
+
+.mitem {
+    color: white !important;
+    /* font-weight: bold; */
+    font-size: 16px;
+    padding: 12px 24px;
+    position: relative;
+    transition: all ease-in-out .3s;
+    display: flex;
+    align-items: center;
+}
+
+.mitem:hover {
+    background-color: var(--primarya, #f4f4f464);
+    color: #f4f4f4;
+}
+
+.mlist>i {
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    font-size: 24px;
+}
+
+.mitem + .mitem {
+    margin-top: 8px;
+}
+
+.mitem>i {
+    margin-right: 12px;
+    width: 32px;
+}
+
+/* Animation */
+@keyframes show {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.show {
+    animation: show .3s ease-in-out forwards;
+}
+
+.hide {
+    animation: hide .3s ease-in-out forwards;
+}
+/* Desktop account */
+.account {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 var(--padding-small, 14px);
+    position: relative;
+}
+
+.account:hover .accountToggle{
+    background-color: var(--primarya, #f4f4f464);
+}
+
+.accountAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    margin-right: var(--margin-super-small, 8px);
+}
+
+.accountInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.accountName {
+    font-weight: bold;
+}
+
+.accountToggle {
+    margin-left: var(--margin-super-small, 8px);
+    border-radius: 100px;
+    padding: var(--padding-super-small, 8px);
+    transition: all ease 0.3s;
+}
+
+.accountItem {
+    padding: var(--padding-super-small, 8px) var(--padding-small, 14px);
+    transition: opacity ease .3s;
+    color: var(--primary, #0d47a1);
+}
+
+.accountItem i {
+    width: 21px;
+    margin-right: 2px;
+}
+
+.accountItem:hover {
+    opacity: 0.6;
+}
+
+.accountLogout {
+    color: var(--red, #dc3545);
+}
+
+/* Account dropdown */
+.accountDropdown {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -91px;
+    box-shadow: var(--shadow, rgba(99, 99, 99, 0.2) 0px 2px 8px 0px);
+    right: 15px;
+    padding: 0;
+    font-size: 14px;
+    background-color: white;
+}
+
+/* Mobile account */
+.mtitle, .maccount {
+    box-sizing: border-box;
+    height: 60px;
+    border-bottom: 1px solid white;
+}
+
+.maccount {
+    box-sizing: border-box;
+    padding: var(--padding-super-small, 8px) var(--padding-medium, 24px);
+    display: flex;
+    align-items: center;
+    font-size: 14px;    
+}
+
+.maccount>img {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    /* border: 1px solid #f4f4f4; */
+    margin-right: var(--margin-super-small, 8px);
+}
+
+.maccountEmail {
+    font-size: 9px;
+}
+
+.maccountName {
+    font-weight: bold;
+}
+
+.maccountInfo {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Mobile navbar */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .mnavbar {
+        display: block;
+    }
+
+    .mtitle>h3{
+        font-size: 14px;
+    }
+}
